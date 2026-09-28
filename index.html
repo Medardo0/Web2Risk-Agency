@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Web2Risk Agency designs bespoke websites and web applications, with a focus on user experience and SEO.">
+  <title>Web2Risk Agency — Websites, apps & SEO</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <!-- defer attend que le HTML soit analysé avant d'exécuter le script. -->
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <!-- Raccourci pour accéder au contenu avec le clavier sans traverser le menu. -->
+  <a class="skip-link" href="#presentation">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#presentation" aria-label="Web2Risk Agency home"><img src="assets/logo/web-2-risk-web-agency-black.png" alt="Web2Risk Agency" width="160" height="80"></a>
+      <button class="menu-toggle" type="button" aria-controls="main-nav" aria-expanded="false" hidden>Menu <span aria-hidden="true">☰</span></button>
+      <!-- Les liens #... ciblent les id des sections sur cette même page. -->
+      <nav id="main-nav" aria-label="Main navigation">
+        <a href="#presentation">About us</a><a href="#services">Services</a><a href="#equipe">Our team</a><a class="button small" href="#contact">Let’s talk <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section id="presentation" class="presentation">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow"><span class="dot"></span> WEB DESIGN & DEVELOPMENT</p>
+            <h1>Your ideas.<br>Our expertise.<br><span>A better web.</span></h1>
+            <p>Web2risk Agency is an innovative web agency specialising in the design and development of bespoke websites and web applications.</p>
+            <a class="button" href="#services">Explore our services <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="hero-photo">
+            <img src="assets/misc/pexels-negativespace-160107.jpg" alt="Working on a website on a laptop" width="1100" height="900" fetchpriority="high">
+            <div class="photo-caption"><span>From the first idea<br>to the final click.</span><span class="caption-arrow" aria-hidden="true">↗</span></div>
+          </div>
+        </div>
+        <div class="about-grid">
+          <div><p class="eyebrow">01 / ABOUT US</p><h2>Built around<br>your ambitions.</h2></div>
+          <div class="about-copy">
+            <p>Situated at the heart of digital transformation, our agency supports businesses in optimising their online presence by offering technological solutions tailored to their specific needs.</p>
+            <p>Our services encompass the entire digital creation process, from initial analysis to final deployment. Whether for a showcase site, an e-commerce platform, or a complex web application, Web2risk Agency delivers efficient, secure and scalable solutions.</p>
+            <p>Boasting a team of experienced developers and creative designers, Web2risk Agency places user experience at the heart of every project. With a collaborative and innovative approach, we transform our clients’ ideas into tangible projects, optimised to enhance their visibility and digital growth.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="services" class="section services">
+      <div class="container">
+        <div class="section-heading"><div><p class="eyebrow">02 / OUR SERVICES</p><h2>Good ideas deserve<br>great execution.</h2></div><p>From your website to your search ranking,<br>we help you take the next step.</p></div>
+        <div class="cards">
+          <article class="service-card"><img src="assets/services/websites.jpg" alt="Website development workspace" width="640" height="440" loading="lazy"><div class="card-body"><span class="card-number">01</span><h3>Custom website<br>development</h3><p>Creation of unique and optimised websites, adaptable to all devices, to ensure an engaging and modern user experience.</p><a href="#contact">Let’s build your website <span aria-hidden="true">↗</span></a></div></article>
+          <article class="service-card"><img src="assets/services/applications.jpg" alt="Developing a web application" width="640" height="440" loading="lazy"><div class="card-body"><span class="card-number">02</span><h3>Interactive web<br>applications</h3><p>Design of high-performing and intuitive web applications, incorporating the latest technologies to meet the specific needs of each client.</p><a href="#contact">Tell us about your app <span aria-hidden="true">↗</span></a></div></article>
+          <article class="service-card"><img src="assets/services/seo.jpg" alt="Search engine optimisation and analysis" width="640" height="440" loading="lazy"><div class="card-body"><span class="card-number">03</span><h3>SEO & performance<br>analysis</h3><p>Enhancement of search engine ranking and performance monitoring to maximise the visibility and impact of websites and applications on search engines.</p><a href="#contact">Grow your visibility <span aria-hidden="true">↗</span></a></div></article>
+        </div>
+      </div>
+    </section>
+    <section id="equipe" class="section team">
+      <div class="container">
+        <div class="section-heading"><div><p class="eyebrow">03 / THE TEAM</p><h2>Different skills.<br>One shared vision.</h2></div><p>The people behind your next project.</p></div>
+        <p class="team-intro">The team at Web2risk Agency is made up of passionate and complementary professionals: front-end and back-end developers, UX/UI designers, SEO experts, and dedicated project managers. Each individual contributes their expertise to ensure effective and creative solutions, while maintaining a smooth and efficient collaboration. Together, they strive to transform clients’ ideas into memorable and bespoke digital experiences.</p>
+        <div class="cards team-cards">
+          <article class="team-card"><img src="assets/equipe/lucas.jpg" alt="Lucas" width="640" height="720" loading="lazy"><h3>Lucas</h3><p class="role">Front-End Developer</p><p>A technology enthusiast, Lucas is an expert in JavaScript and modern frameworks such as React and Vue.js. Always on the lookout for the latest trends, he ensures a smooth and responsive interface, with a focus on accessibility and user experience. A great fan of minimalist design, he enjoys creating interfaces that are both aesthetically pleasing and functional.</p></article>
+          <article class="team-card"><img src="assets/equipe/emma.jpg" alt="Emma" width="640" height="720" loading="lazy"><h3>Emma</h3><p class="role">Digital project manager</p><p>With several years of experience in web project management, Emma serves as the link between the technical team and the clients. Organised and meticulous, she ensures that each stage of the project adheres to the budget and timelines, while also meeting the clients’ needs. Possessing a keen ability to listen, she makes certain that every project aligns with the vision of the end user.</p></article>
+          <article class="team-card"><img src="assets/equipe/sophia.jpg" alt="Sofia" width="640" height="720" loading="lazy"><h3>Sofia</h3><p class="role">SEO expert</p><p>With a solid expertise in natural referencing, Sofia is adept at using data analysis tools to maximise the visibility of projects. She conducts thorough SEO audits and identifies the best strategies to ensure each site achieves optimal positioning. Passionate about numbers and user behaviour, she constantly adjusts her recommendations to enhance performance.</p></article>
+        </div>
+      </div>
+    </section>
+    <section id="contact" class="section contact">
+      <div class="container contact-grid">
+        <div><p class="eyebrow">04 / GET IN TOUCH</p><h2>Have a project<br>in mind?<br><span>Let’s talk.</span></h2><p>Tell us what you’re working on.<br>We’d love to hear your ideas.</p><span class="contact-arrow" aria-hidden="true">↗</span></div>
+        <!-- action et method permettent aussi l'envoi classique si JavaScript est désactivé.
+             Les attributs name servent de clés pour récupérer les champs côté PHP. -->
+        <form id="contactForm" action="contact.php" method="post">
+          <label for="name">Your name</label><input id="name" name="name" autocomplete="name" maxlength="100" required placeholder="Alex Smith">
+          <label for="email">Email address</label><input id="email" name="email" type="email" autocomplete="email" maxlength="254" required placeholder="alex@example.com">
+          <label for="message">Your message</label><textarea id="message" name="message" rows="5" maxlength="5000" required placeholder="A few words about your project…"></textarea>
+          <div class="honeypot" aria-hidden="true"><label for="website">Leave this field empty</label><input id="website" name="website" tabindex="-1" autocomplete="off"></div>
+          <p class="form-note">Your details will only be used to respond to your enquiry.</p>
+          <button class="button" type="submit">Send message <span aria-hidden="true">↗</span></button>
+          <!-- Annoncer le résultat aux lecteurs d'écran sans interrompre la lecture. -->
+          <p id="formMessage" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer><div class="container footer-inner"><a class="brand" href="#presentation"><img src="assets/logo/web-2-risk-web-agency-black.png" alt="Web2Risk Agency" width="140" height="70" loading="lazy"></a><p>© <span id="year">2026</span> Web2Risk Agency</p><a href="#presentation">Back to top ↑</a></div></footer>
+</body>
+</html>

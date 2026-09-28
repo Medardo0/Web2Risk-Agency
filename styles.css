@@ -1,0 +1,624 @@
+﻿/* Palette du starter pack */
+:root {
+  --yellow:#fddb00;
+  --white:#fff;
+  --blue:#568ea3;
+  --sky:#68c3d4;
+  --dark:#313638
+}
+
+* {
+  /* La largeur inclut les bordures et le padding, ce qui facilite les calculs. */
+  box-sizing:border-box
+}
+
+html {
+  /* Garder de la place pour l'en-tête quand un lien mène à une section. */
+  scroll-behavior:smooth;
+  scroll-padding-top:100px
+}
+
+body {
+  margin:0;
+  color:var(--dark);
+  background:#fff;
+  font-family:'Open Sans',sans-serif;
+  line-height:1.7
+}
+
+h1,h2,h3,.button,.eyebrow {
+  font-family:'Space Grotesk',sans-serif
+}
+
+h1,h2,h3,p {
+  margin-top:0
+}
+
+h1,h2,h3 {
+  line-height:1.1;
+  font-weight:600
+}
+
+h1 {
+  /* clamp fixe un minimum, une taille liée à l'écran et un maximum. */
+  font-size:clamp(3rem,5.5vw,5rem);
+  letter-spacing:-.06em;
+  margin-bottom:25px
+}
+
+h2 {
+  font-size:clamp(2.2rem,3.7vw,3.5rem);
+  letter-spacing:-.045em;
+  margin-bottom:24px
+}
+
+h3 {
+  font-size:1.65rem;
+  letter-spacing:-.03em
+}
+
+a {
+  color:inherit;
+  text-decoration:none
+}
+
+img {
+  /* cover remplit le cadre sans déformer l'image, quitte à en recadrer les bords. */
+  display:block;
+  max-width:100%;
+  object-fit:cover
+}
+
+button,input,textarea {
+  font:inherit
+}
+
+button {
+  cursor:pointer
+}
+
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible {
+  /* Rendre visible l'élément sélectionné au clavier. */
+  outline:3px solid var(--blue);
+  outline-offset:5px
+}
+
+.container {
+  /* Centrer le contenu, limiter sa largeur et garder des marges sur petit écran. */
+  width:min(1180px,90%);
+  margin:auto
+}
+
+.section {
+  padding:90px 0
+}
+
+.eyebrow {
+  font-size:.75rem;
+  font-weight:700;
+  letter-spacing:.14em;
+  margin-bottom:22px
+}
+
+.site-header {
+  /* sticky garde l'en-tête en haut pendant le défilement ; z-index le place devant. */
+  position:sticky;
+  top:0;
+  z-index:10;
+  background:white;
+  border-bottom:1px solid #31363820
+}
+
+.header-inner {
+  min-height:96px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:24px
+}
+
+.brand img {
+  width:150px;
+  height:74px;
+  object-fit:contain
+}
+
+nav {
+  display:flex;
+  align-items:center;
+  gap:35px;
+  font-size:.9rem;
+  font-weight:600
+}
+
+nav>a:not(.button):hover,footer a:hover {
+  text-decoration:underline;
+  text-underline-offset:6px
+}
+
+.button {
+  display:inline-flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:35px;
+  padding:17px 24px;
+  background:var(--yellow);
+  color:var(--dark);
+  border:1px solid var(--yellow);
+  font-weight:700;
+  font-size:.95rem;
+  transition:background .2s,transform .2s
+}
+
+.button:hover {
+  background:white;
+  transform:translateY(-2px)
+}
+
+.button span {
+  font-size:1.4rem;
+  line-height:1
+}
+
+.button.small {
+  padding:12px 20px
+}
+
+.menu-toggle {
+  display:none;
+  background:white;
+  border:1px solid var(--dark);
+  padding:8px 14px
+}
+
+.hero-grid {
+  /* Deux colonnes de même largeur : texte à gauche, photo à droite. */
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  align-items:center;
+  gap:65px;
+  padding:65px 0 75px
+}
+
+.hero-copy>p:not(.eyebrow) {
+  max-width:490px;
+  margin-bottom:30px
+}
+
+h1>span {
+  background:linear-gradient(transparent 64%,var(--yellow) 64%,var(--yellow) 92%,transparent 92%)
+}
+
+.dot {
+  display:inline-block;
+  width:8px;
+  height:8px;
+  background:var(--blue);
+  border-radius:50%;
+  margin-right:9px
+}
+
+.hero-photo {
+  position:relative;
+  padding:0 16px 16px 0;
+  background:linear-gradient(135deg,transparent 5%,var(--sky) 5%);
+  margin-top:10px
+}
+
+.hero-photo>img {
+  width:100%;
+  height:490px
+}
+
+.photo-caption {
+  /* La position se calcule par rapport à .hero-photo, qui est en position relative. */
+  position:absolute;
+  bottom:38px;
+  left:-25px;
+  background:var(--yellow);
+  padding:23px 27px;
+  display:flex;
+  gap:45px;
+  align-items:center;
+  font-family:'Space Grotesk',sans-serif;
+  font-size:1.15rem;
+  line-height:1.3;
+  font-weight:600
+}
+
+.caption-arrow {
+  font-size:3rem
+}
+
+.about-grid {
+  border-top:1px solid #31363830;
+  padding:55px 0 65px;
+  display:grid;
+  grid-template-columns:1fr 1.6fr;
+  gap:70px
+}
+
+.about-copy p:last-child {
+  margin-bottom:0
+}
+
+.services {
+  background:var(--dark);
+  color:white
+}
+
+.section-heading {
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  gap:30px;
+  margin-bottom:35px
+}
+
+.section-heading h2 {
+  margin-bottom:0
+}
+
+.section-heading>p {
+  font-size:.9rem;
+  margin-bottom:5px
+}
+
+.services .eyebrow {
+  color:var(--yellow)
+}
+
+.cards {
+  /* Trois colonnes égales ; minmax(0, 1fr) leur permet de rétrécir malgré le contenu. */
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:28px
+}
+
+.service-card {
+  background:white;
+  color:var(--dark);
+  display:flex;
+  flex-direction:column
+}
+
+.service-card>img {
+  width:100%;
+  height:215px
+}
+
+.card-body {
+  padding:26px;
+  display:flex;
+  flex-direction:column;
+  flex:1
+}
+
+.card-number {
+  font-family:'Space Grotesk',sans-serif;
+  color:var(--blue);
+  margin-bottom:18px;
+  font-size:.85rem
+}
+
+.card-body h3 {
+  margin-bottom:18px
+}
+
+.card-body p {
+  font-size:.9rem;
+  margin-bottom:25px
+}
+
+.card-body a {
+  /* Dans cette colonne flex, margin-top: auto pousse le lien en bas de la carte. */
+  border-top:1px solid #31363830;
+  padding-top:18px;
+  margin-top:auto;
+  font-weight:700;
+  font-size:.8rem;
+  display:flex;
+  justify-content:space-between;
+  gap:12px
+}
+
+.card-body a:hover {
+  text-decoration:underline
+}
+
+.team-intro {
+  max-width:950px;
+  margin-bottom:40px
+}
+
+.team-card>img {
+  width:100%;
+  height:330px;
+  object-position:center 30%;
+  margin-bottom:25px
+}
+
+.team-card h3 {
+  margin-bottom:8px;
+  font-size:2rem
+}
+
+.team-card .role {
+  font-weight:700;
+  margin-bottom:18px
+}
+
+.team-card>p:not(.role) {
+  font-size:.875rem
+}
+
+.contact {
+  background:var(--dark);
+  color:white
+}
+
+.contact-grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:100px
+}
+
+.contact h2 {
+  font-size:clamp(3rem,5vw,4.5rem)
+}
+
+.contact h2 span {
+  color:var(--yellow)
+}
+
+.contact-arrow {
+  display:block;
+  color:var(--sky);
+  font-size:6rem;
+  line-height:1;
+  margin-top:40px
+}
+
+label {
+  display:block;
+  margin-bottom:8px;
+  font-size:.9rem
+}
+
+input,textarea {
+  display:block;
+  width:100%;
+  padding:13px 16px;
+  border:1px solid #ffffff75;
+  background:transparent;
+  color:white;
+  border-radius:0;
+  margin-bottom:22px
+}
+
+input::placeholder,textarea::placeholder {
+  color:#d0d3d4;
+  opacity:1
+}
+
+textarea {
+  resize:vertical;
+  min-height:145px
+}
+
+.form-note {
+  font-size:.75rem
+}
+
+#formMessage {
+  margin:16px 0 0;
+  font-size:.9rem
+}
+
+#formMessage[data-state="error"] {
+  border-left:3px solid var(--yellow);
+  padding-left:12px
+}
+
+button:disabled {
+  opacity:.65;
+  cursor:wait
+}
+
+.honeypot {
+  /* Cacher le champ piège visuellement ; le PHP vérifie qu'il reste vide. */
+  position:absolute;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+  clip-path:inset(50%)
+}
+
+.footer-inner {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+  padding:20px 0;
+  font-size:.8rem
+}
+
+.footer-inner p {
+  margin:0
+}
+
+.skip-link {
+  position:fixed;
+  top:-100px;
+  left:20px;
+  padding:12px;
+  background:var(--yellow);
+  z-index:20
+}
+
+.skip-link:focus {
+  top:10px
+}
+
+@media(max-width:950px) {
+  /* Réduire les espacements pour les écrans intermédiaires. */
+  .hero-grid {
+  gap:30px
+}
+
+.hero-photo>img {
+  height:440px
+}
+
+.cards {
+  gap:18px
+}
+
+.card-body {
+  padding:20px
+}
+
+.contact-grid {
+  gap:50px
+}
+
+.team-card>img {
+  height:270px
+}
+
+nav {
+  gap:20px
+}
+
+}
+
+@media(max-width:700px) {
+  /* Sur mobile : une seule colonne et un menu commandé par le bouton. */
+  html {
+  scroll-padding-top:90px
+}
+
+.section {
+  padding:60px 0
+}
+
+.header-inner {
+  min-height:80px;
+  flex-wrap:wrap;
+  gap:0;
+  padding:8px 0
+}
+
+.brand img {
+  width:125px;
+  height:60px
+}
+
+.menu-toggle:not([hidden]) {
+  display:block
+}
+
+nav {
+  width:100%;
+  flex-wrap:wrap;
+  gap:18px;
+  padding:15px 0
+}
+
+.js nav {
+  /* Masquer le menu seulement si JavaScript est actif, sinon les liens restent accessibles. */
+  display:none
+}
+
+.js nav.is-open {
+  display:flex
+}
+
+.hero-grid,.about-grid,.contact-grid,.cards {
+  grid-template-columns:1fr
+}
+
+.hero-grid {
+  padding:40px 0 50px;
+  gap:35px
+}
+
+.hero-copy>p:not(.eyebrow) {
+  max-width:none
+}
+
+.hero-photo {
+  margin-left:12px
+}
+
+.hero-photo>img {
+  height:360px
+}
+
+.photo-caption {
+  left:-12px;
+  bottom:30px;
+  padding:18px 22px
+}
+
+.about-grid {
+  padding:40px 0 50px;
+  gap:10px
+}
+
+.section-heading {
+  display:block
+}
+
+.section-heading>p {
+  margin-top:22px
+}
+
+.cards {
+  gap:32px
+}
+
+.service-card>img {
+  height:230px
+}
+
+.team-card>img {
+  height:390px
+}
+
+.contact-grid {
+  gap:30px
+}
+
+.contact-arrow {
+  display:none
+}
+
+.footer-inner {
+  flex-wrap:wrap;
+  justify-content:center;
+  text-align:center
+}
+
+.footer-inner .brand {
+  flex-basis:100%
+}
+
+.footer-inner .brand img {
+  margin:auto
+}
+
+}
+
+@media(prefers-reduced-motion:reduce) {
+  /* Respecter le réglage de l'utilisateur qui demande moins d'animations. */
+  html {
+  scroll-behavior:auto
+}
+
+*,*::before,*::after {
+  transition:none!important
+}
+
+}
+
